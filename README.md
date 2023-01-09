@@ -5,7 +5,7 @@
 [![Jenkins Plugin](https://img.shields.io/jenkins/plugin/v/opentelemetry.svg)](https://plugins.jenkins.io/opentelemetry)
 [![GitHub release](https://img.shields.io/github/release/jenkinsci/opentelemetry-plugin.svg?label=changelog)](https://github.com/jenkinsci/opentelemetry-plugin/releases/latest)
 [![Jenkins Plugin Installs](https://img.shields.io/jenkins/plugin/i/opentelemetry.svg?color=blue)](https://plugins.jenkins.io/opentelemetry)
-[![Otel SDK](https://img.shields.io/badge/otel--sdk-1.17.0-blue?style=flat&logo=opentelemetry)](https://github.com/open-telemetry/opentelemetry-java/releases/tag/v1.17.0)
+[![Otel SDK](https://img.shields.io/badge/otel--sdk-1.18.0-blue?style=flat&logo=opentelemetry)](https://github.com/open-telemetry/opentelemetry-java/releases/tag/v1.18.0)
 
 ## Introduction
 
@@ -136,6 +136,13 @@ Navigate to the Jenkins OpenTelemetry Plugin configuration, in the "Advanced" se
 otel.exporter.otlp.protocol=http/protobuf
 ```
 
+### Support for disabling the Groovy Sandbox and accessing the Jenkins pipeline logs APIs while enabling the Jenkins OpenTelemetry Plugin
+
+No test have been done on disabling the Groovy Sandbox and accessing the Jenkins pipeline logs APIs while enabling the Jenkins OpenTelemetry Plugin for the following reasons:
+* Disabling the Groovy Sandbox is a very advanced use case due to the security implications of doing so
+* The surface of Jenkins pipeline logs capabilities exposed by disabling the Groovy sandbox is very broad and goes way beyond the OpenTelemetyr plugin
+
+If you are limited with the current capabilities of the Jenkins OpenTelemetry Plugin and consider opening up the Groovy sandbox to workaround these limitations, please prefer to reach out to us creating an enhancement request so we can work together at productizing the proper secured solution to your problem.
 
 ## Learn More
 

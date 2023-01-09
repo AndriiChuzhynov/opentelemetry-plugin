@@ -9,7 +9,7 @@
     <parent>
         <groupId>org.jenkins-ci.plugins</groupId>
         <artifactId>plugin</artifactId>
-        <version>4.46</version>
+        <version>4.51</version>
         <relativePath />
     </parent>
     <groupId>io.jenkins.plugins</groupId>
@@ -17,15 +17,15 @@
     <version>${revision}${changelist}</version>
     <packaging>hpi</packaging>
     <properties>
-        <revision>2.9.3</revision>
+        <revision>2.10.1</revision>
         <changelist>-SNAPSHOT</changelist>
         <jenkins.version>2.346.1</jenkins.version>
         <gitHubRepo>jenkinsci/${project.artifactId}-plugin</gitHubRepo>
-        <opentelemetry.version>1.18.0</opentelemetry.version>
-        <opentelemetry-alpha.version>1.18.0-alpha</opentelemetry-alpha.version>
+        <opentelemetry.version>1.19.0</opentelemetry.version>
+        <opentelemetry-alpha.version>1.19.0-alpha</opentelemetry-alpha.version>
         <useBeta>true</useBeta>
-        <elasticstack.version>8.4.1</elasticstack.version>
-        <error-prone.version>2.15.0</error-prone.version>
+        <elasticstack.version>8.4.3</elasticstack.version>
+        <error-prone.version>2.16</error-prone.version>
     </properties>
     <name>OpenTelemetry Plugin</name>
     <description>Monitor, troubleshoot and observe Jenkins with OpenTelemetry.
@@ -87,6 +87,10 @@
         <dependency>
             <groupId>io.opentelemetry</groupId>
             <artifactId>opentelemetry-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.opentelemetry</groupId>
+            <artifactId>opentelemetry-api-logs</artifactId>
         </dependency>
         <dependency>
             <groupId>io.opentelemetry</groupId>
@@ -219,7 +223,7 @@
         <dependency>
             <groupId>org.jenkins-ci.plugins</groupId>
             <artifactId>cloudbees-disk-usage-simple</artifactId>
-            <version>0.10</version>
+            <version>170.va_fd5b_4ee6858</version>
             <optional>true</optional>
         </dependency>
         <dependency>
@@ -367,7 +371,7 @@
             <!--
             can bump to 3.9 because it requires jenkins-core 2.270
             -->
-            <version>3.8</version>
+            <version>3.20</version>
             <scope>test</scope>
             <exclusions>
                 <exclusion>
@@ -460,7 +464,7 @@
         <dependency>
             <groupId>org.testcontainers</groupId>
             <artifactId>testcontainers</artifactId>
-            <version>1.17.2</version>
+            <version>1.17.6</version>
             <scope>test</scope>
             <exclusions>
                 <exclusion>
